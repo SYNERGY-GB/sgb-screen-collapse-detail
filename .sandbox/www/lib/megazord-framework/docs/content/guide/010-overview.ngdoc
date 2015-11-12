@@ -1,0 +1,50 @@
+@ngdoc overview
+@name Overview
+
+@description
+
+# Overview
+
+Megazord is a framework to create hybrid mobile apps using reusable components on top of [Ionic Framework](http://ionicframework.com),
+[AngularJS](https://angularjs.org) and [Cordova](https://cordova.apache.org).
+
+The idea behind the architecture is to separate concerns and decouple the main mobile app pieces. 
+
+This architecture of components allow us to create apps very quickly and focus on 
+functionality and not plumbing code. For instance, the framework provides ready made
+configurable screens (templates) that are easy to customize, and data source components to get
+data from different sources. 
+
+This way you can create and app just assembling different and independent components such as
+screens and data sources. The framework also provides services to manage interactions from the
+ user.
+
+In general one mobile app is composed of:
+
+- Metadata, where we configure the app.
+- Screens, where we show information and provide interaction to the user.
+- Data, that is used for logic and provide functionality and is frequently shown on screen.
+- Resources, such as images, CSS styles, files and so on.
+
+With an architecture of reusable components we need a generator to assemble the pieces and also some framework services that are common to all components or to all apps, such as interaction management, routing of events and data access mechanism.
+
+![Diagram](assets/megazord-framework-components-small.png)
+
+In this sense the framework provides:
+
+- Modular uncoupled and reusable components to manage views and data
+
+ The Screen "does not know from what Screen it comes or where it should go next". This way the Screen can be developed as a component in isolation and can be tested alone. The Screen is not should not be coupled with any data.
+
+ The Data source is a component that it is configured to get data from a source. The Data source is used by the controllers to get the data and this data is transformed to be used by the Screens. You only have to develop one Data source to get data from a database and then you just use it.
+
+- A way to configure and generate the mobile App
+
+ The mobile App is generated based on configuration files that specify the components and the way they are related to each other in that particular App.
+
+ This way you configure the Events and how the are managed to provide a managed interaction. The developer just configure and all that logic (Event handling and navigation) is managed by the framework.
+
+- Provide a way to manage resources (text, images, styles, et al)
+
+ The framework provides a way to make each application international and to use different styles in the views.
+

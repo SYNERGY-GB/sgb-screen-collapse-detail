@@ -1,0 +1,41 @@
+@ngdoc overview
+
+@name Setting up
+
+@description
+
+# Setting up the development enviroment
+To use __Megazord Framework__ you must install the following tools:
+1. [nodejs](https://nodejs.org/en/download/releases/) versión 0.12
+
+ > If you need permisions to install software use __sudo__ command.
+ > Notice that you will need credentials to use it.
+
+2. To verify the __node__ version run:
+        node -v
+
+3. npm
+        npm install --global npm@latest
+
+4. To verify the __npm__ version run:
+        npm -v
+
+ > If you need more than one version of node installed on your enviroment you can use __nvm__.
+ > Allways be sure about what __node__ version you are working on.
+
+5. Install __yeoman__
+        npm install --global yo bower grunt-cli
+
+6. Install __Megazord App Generator__
+        npm install git+ssh://git@github.com:SYNERGY-GB/generator-megazord.git
+
+7. Create a directory for your __Megazord App__
+        mkdir <megazordAppName>
+        cd <megazordAppName>
+
+8. Create the app scafolding using __Megazord App Generator__
+        yo megazord
+
+9. Follow the steps and answer the questions from the __Megazord App Generator__
+   
+

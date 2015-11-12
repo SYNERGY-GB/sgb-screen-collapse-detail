@@ -1,0 +1,37 @@
+{
+  "name": "sgb-datasource-function",
+  "homepage": "https://github.com/SYNERGY-GB/sgb-datasource-function",
+  "authors": [
+    "Saul Hernandez <sauldhernandez@gmail.com>"
+  ],
+  "description": "Takes a function as a data source.",
+  "main": "dist/sgb-datasource-function.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "megazord",
+    "datasource"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "megazord-framework": "git@github.com:SYNERGY-GB/megazord-framework.git#1.0"
+  },
+  "_release": "7e0ecb4c44",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "7e0ecb4c44fb3bb56b937c594a6d6311b288f1d4"
+  },
+  "_source": "git@github.com:SYNERGY-GB/sgb-datasource-function.git",
+  "_target": "master",
+  "_originalSource": "git@github.com:SYNERGY-GB/sgb-datasource-function.git",
+  "_direct": true
+}

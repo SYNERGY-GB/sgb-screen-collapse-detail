@@ -1,0 +1,91 @@
+@ngdoc overview
+@name About Metadata
+@description
+
+# Metadata
+The metadata comes from three files that define the applicacion structure and behavior when navigating though it
+
+## *screens.ts*
+This file contains an object that defines the application structure.
+A Megazord application is a set of *screens* usually structured as a tree. A root *screen* may have many children *screens*.
+
+ > A *screen* is a state in UI Router
+
+Every *screen* has the following parameters:
+
+- **type:** the alias of the *screen* used, this value must match a *screen* name in the megazord repository.  In case that the user wants to use a local *screen*, the alias must begin with '@', this allows the framework to fetch the controller from a local folder *app* in the application directory. The idea behind is that you can use reusable *screens* from the Framework or create your own *screens*, using '@' you are telling the Framework to use a local *screen*.
+- **template(optional):** this value must be specified in case the user wants to use a custom template. The value must begin with '@'. This allows the framework to fetch the template from a local folder *theme/templates/* in the application directory. This way you can override the template that comes from the *screen* in the Framework.
+
+ > __Megazord Framework__ allows you to override some components or behaviours to provide flexibility to the developer.
+
+- **default(optional):** A boolean value that only needs to be true when a *screen* is the default when opening the application.  There can be only one default *screen* in the application structure.
+- **dataSource:** the configuration of the data source used for the *screen*
+- **params:** the *screen* configuration parameters
+- **screens(optional):** the children screens
+
+---
+
+### Configuration parameters
+
+The *screen* configuration parameters.  These parameters are useful to define the behavior and functionality of a megazord *screen*. Through the use of the mentioned parameters, the user can customize the *screen* so it complies with the requirements of the application
+
+<u> Example </u> 
+
+	login: {
+        type: 'sgb-screen-login',
+        dataSource: {
+            type: 'sgb-datasource-json#1.0',
+            params: {
+                path: 'https://myService.com/data.json'
+            }
+        },
+        params: {  
+            "maxAttempts": 3,
+            "forgotPassword" : true,
+            "onScreenValidation" : true,
+            "passwordValidation" : "^\\d{1}$",
+            "usernameValidation" : "^\\d{1}$"
+        }
+    }
+
+
+
+## *routes.ts*
+
+In this file, the application navigation is defined by declaring the routing events of every *screen* in the application structure.
+
+Every *screen* can define and fire many events, however, the *screen* not neccessarly knows where is navigating when it fires an event. The user is responsible for defining the navigation.
+
+To define the events for a *screen*, the name must be specified and then a *screen* must be specified for every event name
+
+<u> Example </u>
+
+    "root.login": {
+        loginFinished: 'menu.mainMenu',
+        loginFailed: 'root.loginFailed',
+        loginBlocked: 'root.loginBlocked',
+        forgotPassword : 'root.recover'
+    },
+
+    "root.loginBlocked": {
+    	goBack: "root.login"
+    }
+
+
+## *languages.ts*
+
+In this file, the application language support is defined by declaring the available languages and the preferred one.
+
+<u> Example </u>
+
+    export var languages : Megazord.LanguageConfig = {
+        available: ['en_us'],
+        preferred : 'en_us'
+    };
+
+
+
+
+
+
+
