@@ -5,5 +5,6 @@ angular.module('sgb-screen-collapse-detail', ['megazord'])
         _screen.initialize($scope, _screenParams);
 			$scope.data = _data;
    			$scope.collapses = $scope.data.collapse;
+   			$scope.params = _screenParams;
    			   		
     }]);

@@ -1,4 +1,4 @@
-<ion-view mz-screen view-title="{{ title | translate }}">
+<ion-view mz-screen view-title="{{ params.title | translate }}">
   <ion-content>
       <div class="card">
 			 	<img class="item item-image" src="{{ data.image }}" >			
@@ -10,9 +10,9 @@
   			    <div class="col col-75">
   				    <p class=" xy title titlePosition" ng-click="showList=!showList">{{collapse.collapseSubtitle}}</p>
 			      </div>
-  			    <div class="col col-25 imagep">
-  				   <img class="sizeImage" src="{{ collapse.iconPlusOutline}}" ng-show="!showList" ng-click="showList=!showList">
-  				   <img class="sizeImage" src="{{ collapse.iconMinusOutline}}" ng-show="showList" ng-click="showList=!showList">  
+  			    <div class="col col-25 sizeImage">
+              <i class=" icon {{ collapse.iconPlusOutline}}" ng-show="!showList" ng-click="showList=!showList"></i>
+              <i class=" icon {{ collapse.iconMinusOutline}}" ng-show="showList" ng-click="showList=!showList"></i>
             </div>
   		    </div>
           <p ng-show="showList" class="text">{{collapse.collapseDescription}}</p>
