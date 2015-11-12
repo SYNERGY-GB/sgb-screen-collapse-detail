@@ -1,7 +1,0 @@
-{
-  "name": "sgb-screen-collapse-detail",
-  "app_id": "",
-  "watchPatterns": [
-    "www/**/*"
-  ]
-}
