@@ -1,22 +1,22 @@
 <ion-view mz-screen view-title="{{ params.title | translate }}">
   <ion-content>
       <div class="card">
-			 	<img class="item item-image" src="{{ data.image }}" >			
-   		  <p class="title text"><i class="{{ data.icon }} "></i> {{ data.title }} </p>
-				<p class="text">{{data.description}}</p> 
-   	     <!--collapse detail-->
+        <img class="item item-image img" src="{{ data.image }}" >     
+        <p class="title text"><i class="{{ data.icon }} "></i> {{ data.title }} </p>
+        <p class="text">{{ data.description }}</p> 
+         <!--collapse detail-->
         <div ng-repeat="collapse in collapses">
           <div class="row">
-  			    <div class="col col-75">
-  				    <p class=" xy title titlePosition" ng-click="showList=!showList">{{collapse.collapseSubtitle}}</p>
-			      </div>
-  			    <div class="col col-25 sizeImage">
-              <i class=" icon {{ collapse.iconPlusOutline}}" ng-show="!showList" ng-click="showList=!showList"></i>
-              <i class=" icon {{ collapse.iconMinusOutline}}" ng-show="showList" ng-click="showList=!showList"></i>
+            <div class="col col-75">
+              <p class="title titlePosition" ng-click="showList=!showList">{{ collapse.collapseSubtitle }}</p>
             </div>
-  		    </div>
-          <p ng-show="showList" class="text">{{collapse.collapseDescription}}</p>
-	       </div>  
+            <div class="col col-25 sizeImage">
+              <i class="icon {{ collapse.iconPlusOutline }}" ng-show="!showList" ng-click="showList=!showList"></i>
+              <i class="icon {{ collapse.iconMinusOutline }}" ng-show="showList" ng-click="showList=!showList"></i>
+            </div>
+          </div>
+          <p ng-show="showList" class="text">{{ collapse.collapseDescription }}</p>
+         </div>  
       </div>
   </ion-content>
 </ion-view>

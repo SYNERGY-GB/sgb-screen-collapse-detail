@@ -10,21 +10,21 @@ data =
                             "iconPlusOutline":"  ion-android-add-circle ",
                             "iconMinusOutline":" ion-android-remove-circle ",
                             "collapseSubtitle":"Como Funciona?",
-                            "collapseDescription":'La tecnología 4G está basada completamente en el protocolo IP, siendo un sistema de sistemas y una red de redes, que se alcanza gracias a la convergencia entre las redes de cables e inalámbricas. Esta tecnología podrá ser usada por módems inalámbricos, smartphones y otros dispositivos móviles.'
+                            "collapseDescription":"La tecnología 4G está basada completamente en el protocolo IP, siendo un sistema de sistemas y una red de redes, que se alcanza gracias a la convergencia entre las redes de cables e inalámbricas. Esta tecnología podrá ser usada por módems inalámbricos, smartphones y otros dispositivos móviles."
                         },
 
                         {   
                             "iconPlusOutline":"  ion-android-add-circle ",
                             "iconMinusOutline":" ion-android-remove-circle ",
                             "collapseSubtitle":"Por que me Conviene?",
-                            "collapseDescription":'La tecnología 4G está basada completamente en el protocolo IP, siendo un sistema de sistemas y una red de redes, que se alcanza gracias a la convergencia entre las redes de cables e inalámbricas. Esta tecnología podrá ser usada por módems inalámbricos, smartphones y otros dispositivos móviles.'
+                            "collapseDescription":"La tecnología 4G está basada completamente en el protocolo IP, siendo un sistema de sistemas y una red de redes, que se alcanza gracias a la convergencia entre las redes de cables e inalámbricas. Esta tecnología podrá ser usada por módems inalámbricos, smartphones y otros dispositivos móviles."
                         },
 
                         {   
                             "iconPlusOutline":"  ion-android-add-circle ",
                             "iconMinusOutline":" ion-android-remove-circle ",
                             "collapseSubtitle":"Donde lo encuentro?",
-                            "collapseDescription":'La tecnología 4G está basada completamente en el protocolo IP, siendo un sistema de sistemas y una red de redes, que se alcanza gracias a la convergencia entre las redes de cables e inalámbricas. Esta tecnología podrá ser usada por módems inalámbricos, smartphones y otros dispositivos móviles.'
+                            "collapseDescription":"La tecnología 4G está basada completamente en el protocolo IP, siendo un sistema de sistemas y una red de redes, que se alcanza gracias a la convergencia entre las redes de cables e inalámbricas. Esta tecnología podrá ser usada por módems inalámbricos, smartphones y otros dispositivos móviles."
                         }
                      
                     ]

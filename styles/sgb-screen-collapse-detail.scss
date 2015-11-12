@@ -1,30 +1,23 @@
-.imagep{
-	
-	text-align: center;
-    margin-top: -7px;
-    margin-left: 12px
+.img{
+    width: 100% 
 }
  .text{
-    padding: 0px 10px;
+    padding: 0em 0.5em;
     text-align: justify;
 }
 
 .title{
-    font-size: 16px;
+    font-size: 1.5em;
     color: rgba(0, 111, 170, 0.57);
-    margin: 18px 0px 5px -3px;
+    margin: 0.5em 0.5em 0.25em -0.2em;
     font-weight: bold;
 }
 
-.titlePosition{
-	margin: -4px 0px 5px 0px;	
-}
-
-.titlePosition1{
-   margin: -18px 0px 5px 0px;		
+.titlePosition {
+    margin: -0.1em 0em 0.5em 0em;   
 }
 
 .sizeImage{
-	margin: -5px 0px 0px 50px;
+    margin: 0em 0em 0em 4em;
     color: rgba(0, 111, 170, 0.57);
 }
