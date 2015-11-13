@@ -18,8 +18,8 @@ Los datos se reciben mediante un Json que describe el título, ícono, descripci
     
 -**iconPlusOutline**: url del símbolo "+" utilizado por la lista   
 -**iconMinusOutline**: url del símbolo "-" utilizado por la lista
--**collapseSubtitle**: título de la opción *collapse*.                             
--**collapseDescription**: descripción de la opción *collapse*.
+-**collapseSubtitle**: título de la opción collapse.                             
+-**collapseDescription**: descripción de la opción collapse.
         
     
 <h3>Ejemplo JSON</h3>
