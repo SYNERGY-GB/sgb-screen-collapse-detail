@@ -1,0 +1,1 @@
+var translations = [{"lang":"en_us","table":{"screen_title":"Collapse Detail"}}];

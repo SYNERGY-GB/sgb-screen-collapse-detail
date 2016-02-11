@@ -1,0 +1,84 @@
+@ngdoc overview
+@name About Screens
+
+@description
+
+# About Screens
+
+Screens are the centerpiece component type in Megazord. A screen represents a whole mobile app screen, providing information
+to the user and allowing interaction. Screens are heavily based on Angular, and as such they have:
+
+- A controller (declared with `angular.controller`)
+- A view (or set of views). Every view is simply an angular template. Multiple views can be defined so users can choose
+  which one to use.
+
+Screens also have other assets that are not strictly angular-related:
+
+- A sass stylesheet. This stylesheet defines any variables and style that can be configured/overriden by anyone using
+  the screen.
+- Localization files. All text that is shown to the user must be placed on localization files and not in the screen's
+  views or logic. This allows app developers to override these texts if need be. Screens must at least localize to
+  English (`en_us`).
+- A `bower.json` file that describes the screen's dependencies. This file also describes any required cordova
+  plugins.
+- Images (primarily svg files) that are used in the screen's UI. Other assets can be used (as the screen requires).
+
+A screen can be used multiple times in a single application. When referring to a single use of a screen, we call it
+a __screen instance__.
+
+## Screens are composable
+
+Screen instances in a megazord application form a tree. This tree describes a contention hierarchy for all screens
+in the application.
+
+Take the following example:
+
+TODO: Example
+
+Screen instances that are branches in the middle of the tree are called __container screens__. These screens do not receive any
+data. Instead they define behavior that can be shared among several screens, like a tab bar or a shared menu. All container
+screens leave at least one 'hole' (as an `ion-nav-view` or `ui-view`), where a child screen will be placed. Additionally,
+a user cannot navigate to a container screen (as he would access a screen with missing UI).
+
+The screen instances that reside on the leaves of the tree are called __data screens__. These screens receive information from a
+data source and provide full interaction for the user.
+
+Every screen instance has a name. The full name of a screen will be the names of all of its parents, and its own name,
+separated by dots `.`
+
+For example, if we have screen called `dashboard` inside a screen called `mainMenu`, that screen's full name would be
+`mainMenu.dashboard`. Full names are used when routing events in an application's metadata, so do care for them when
+creating applications.
+
+## Screens are modular
+
+A screen is a very modular component. As such, it cares not what application it is being used in. A screen also consumes
+information, but it's not responsible of retrieving the information.
+
+Because of this, screen developers will not know beforehand what screen was shown before this one, or where was
+the screen's information loaded from.
+
+### What a screen receives
+
+A screen receive exactly three inputs:
+
+- The event that triggered the screen being shown.
+- The data that was loaded for the screen to consume (if the screen is a data screen).
+- Configuration parameters (defined by the application metadata).
+
+These are available for the screen as `$stateParams.event`, `$stateParams.data` and `_screenParams` respectively. More
+info on how to use them can be found in the __Screen development guide__.
+
+### What a screen produces
+
+Depending on what a screen does, it may call a REST service, or do anything inside its internal logic as long as it does not
+need to transition to a different screen. When it comes to those kind of interactions, the framework needs not know what
+the screen is doing. However, when a screen is done with its work and needs the application to move on, it must
+__fire an event__.
+
+An event is simply an object with two values: a `name` that indicate what event is this, and a `params` object that can
+hold whatever the screen is willing to produce.
+
+Hence, the output of a screen is an [Event](#/api/megazord/type/_router.Event).
+
+

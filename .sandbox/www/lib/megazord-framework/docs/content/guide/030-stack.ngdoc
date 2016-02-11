@@ -1,0 +1,82 @@
+@ngdoc overview
+@name How Megazord works
+
+@description
+
+# How Megazord works
+
+Megazord has three major components:
+
+1. A [yeoman](http://yeoman.io) generator called [generator-megazord](https://github.com/SYNERGY-GB/generator-megazord),
+   that helps you to quickly get started in developing an application or a component. The generator scaffolds your
+   application or component and sets it all up so you can use the sdk.
+
+2. An sdk - [megazord-sdk](https://github.com/SYNERGY-GB/megazord-sdk). The sdk allows you to create components (screens,
+   data sources, etc.) or mobile applications that use previously created components, based on descriptive
+   metadata.
+
+3. A runtime framework - [megazord-framework](https://github.com/SYNERGY-GB/megazord-framework). This component works
+   as a runtime for all the components that are part of an application, and provides common services to all of them, as
+   well as ways to communicate them among each other.
+
+![Diagram](assets/megazord-framework-general-architecture.png)
+
+
+The way these three components work together is as follows:
+
+1. You create a new application using __generator-megazord__.
+2. You define metadata that describes what components to use in your application and how they're going to behave.
+3. You command __megazord-sdk__ to generate your application.
+4. You run your application. While it is running, it used __megazord-framework__ to communicate your application's
+   components.
+
+## Tools used for application generation
+
+Megazord is a rather light framework, but it relies heavily on existing open source technologies to create hybrid
+mobile applications.
+
+### In the Generator
+
+1. __yeoman__: As the de-facto standard scaffolding tool in the node world, our very own `generator-megazord` is based
+   on it.
+
+### In the SDK
+
+0. __nodejs__: Node is the sdk's runtime. Node's package manager (__npm__) is used to manage the sdk's dependencies.
+
+1. __gulp__: All commands executed by the sdk are defined as gulp tasks. The sdk itself is just a big compendium of
+   coherent gulp tasks. Each task contributes to generating a particular piece of the resulting application.
+
+2. __bower__: Used as the dependency management system for megazord applications and components. You can indicate
+   what external libraries are required by your component by using standard `bower.json` files. Additionally, component
+   resolution when creating a megazord application is also done by bower.
+
+3. __TypeScript__: Megazord metadata is defined in TypeScript. This allows us to validate the metadata when the application
+   is generated, as well as giving additional IDE assistance when you are writing your metadata.
+
+4. __Ionic CLI__: The Ionic command line interface is used to assist developers when creating new components, so they
+   can quickly view the effect of any changes they perform. It is also used when assembling applications, as the cli
+   is used to update the application whenever the metadata is changed.
+
+   The Ionic CLI is also used when installing cordova plugins required by components.
+
+5. __Sass__: This css precompiler is used to describe styles for the components that used them. It is also used when
+   generating an application to generate a small compact stylesheet that is a compendium of all the styles of the
+   application's components.
+
+### In the Framework
+
+1. __Ionic__: Ionic is an integral part of Megazord. It provides a consistent UI experience for both iOS and Android
+   applications in the hybrid world. Megazord itself does not provide many UI facilities; instead it relies on the ones
+   provided by Ionic to help developers create beautiful and reusable components.
+
+2. __AngularJS__: As the basis for Ionic, Angular is used widely inside Megazord as well. Most of the components created
+   for Megazord map to an existing concept in Angular (e.g. Megazord screens are Angular Controllers).
+
+3. __Angular UI Router__: The way Megazord handles screen composition and event handling is based heavily on the Angular
+   UI Router. Each screen in megazord maps to an UI Router state.
+
+4. __Apache Cordova__: As the underlying runtime for our hybrid application, Cordova is what enables us to run our
+   HTML5 apps as mobile apps. It provides an effective bridge between native development (via plugins) and HTML-based
+   world.
+

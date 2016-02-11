@@ -1,0 +1,12 @@
+@ngdoc overview
+@name Component Inventory
+
+@description
+
+### Component Inventory
+
+The inventory is at [producto.synergy-gb.com][1].
+
+Before making new components each developer will ensure there is not an existing component that provides the functionality or an existing component with modifications.
+
+[1]: https://producto.synergy-gb.com/display/MEG/Inventario+de+Componentes "Components Inventory"

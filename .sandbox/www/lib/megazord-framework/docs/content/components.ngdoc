@@ -1,0 +1,21 @@
+@ngdoc overview
+
+@name Components
+
+@description
+
+### Components
+The <a href="components">Components</a> section provides an overview of the reusable components you can create in __Megazord Framework__ and tutorials to create your own components.
+
+### Work ethic
+
+Follow the guidelines in the following documents:
+
+- [__Megazord - Componentes y Apps__](assets/Megazord-ComponentesyApps.pdf)
+- [__Lineamientos para nuevos desarrollos v1__](assets/LineamientosParaNuevosDesarrollosv1.pdf)
+
+### Component documentation
+
+Each component must be documented in Confluence [producto.synergy-gb.com](http://producto.synergy-gb.com) in the Megazord space.
+
+Select a link from the side menu.
