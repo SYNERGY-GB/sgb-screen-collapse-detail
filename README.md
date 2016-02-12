@@ -54,6 +54,24 @@ data = {
   ]
 };
 </pre>
+
+<h3>Ejemplo de configuracion del archivo screen.ts</h3>
+
+<pre>
+"nameScreen": {
+        type: 'sgb-screen-collapse-detail',
+        default: true,
+        dataSource: {
+            type: 'sgb-datasource-json#1.0',
+            params: {
+                path: 'URL del servicio'
+            }
+        },
+        params: {
+            title:"Hello there! I'm the title"
+        }
+    }
+</pre>
  
 
 <h3>Diseño</h3>
