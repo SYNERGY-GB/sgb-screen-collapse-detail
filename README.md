@@ -59,18 +59,18 @@ data = {
 
 <pre>
 "nameScreen": {
-        type: 'sgb-screen-collapse-detail',
-        default: true,
-        dataSource: {
-            type: 'sgb-datasource-json#1.0',
-            params: {
-                path: 'URL del servicio'
-            }
-        },
+    type: 'sgb-screen-collapse-detail',
+    default: true,
+    dataSource: {
+        type: 'sgb-datasource-json#1.0',
         params: {
-            title:"Hello there! I'm the title"
+            path: 'URL del servicio'
         }
+    },
+    params: {
+        title:"Hello there! I'm the title"
     }
+}
 </pre>
  
 
