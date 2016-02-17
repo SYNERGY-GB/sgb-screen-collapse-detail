@@ -1,4 +1,4 @@
-<h1>sgb-screen-collapse-detail</h1>
+<h1>SGB-screen-collapse-detail</h1>
 
 <h3>Propósito</h3>
 
@@ -16,22 +16,10 @@ Los datos se reciben mediante un Json que describe el título, ícono, descripci
 
 <h3>Datos opcionales</h3>
     
-<<<<<<< Updated upstream
 -**iconPlusOutline**: url del símbolo "+" utilizado por la lista   
 -**iconMinusOutline**: url del símbolo "-" utilizado por la lista
 -**collapseSubtitle**: título de la opción collapse.                             
 -**collapseDescription**: descripción de la opción collapse.
-=======
-- **iconPlusOutline**: url del símbolo "+" utilizado por la lista   
-- **iconMinusOutline**: url del símbolo "-" utilizado por la lista
-- **collapseSubtitle**: título de la opción *collapse*.                             
-- **collapseDescription**: descripción de la opción *collapse*.
-
-<h3>Ejemplo de configuración en screens.ts</h3>
-<pre>
-  TODO: Jonathan agregar un ejemplo de configuración!!!
-</pre>
->>>>>>> Stashed changes
         
     
 <h3>Ejemplo JSON</h3>
@@ -71,18 +59,18 @@ data = {
 
 <pre>
 "nameScreen": {
-        type: 'sgb-screen-collapse-detail',
-        default: true,
-        dataSource: {
-            type: 'sgb-datasource-json#1.0',
-            params: {
-                path: 'URL del servicio'
-            }
-        },
+    type: 'sgb-screen-collapse-detail',
+    default: true,
+    dataSource: {
+        type: 'sgb-datasource-json#1.0',
         params: {
-            title:"Hello there! I'm the title"
+            path: 'URL del servicio'
         }
+    },
+    params: {
+        title:"Hello there! I'm the title"
     }
+}
 </pre>
  
 
